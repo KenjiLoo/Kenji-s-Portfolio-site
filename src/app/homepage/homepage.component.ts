@@ -34,8 +34,8 @@ export class HomepageComponent implements OnInit {
     }
   }
 
-  
   onScroll(event:any){
-      this.value += 1;    
+      this.value += 0.85;    
   }
+
 }
