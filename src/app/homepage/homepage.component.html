@@ -1,326 +1,322 @@
 <nb-layout>
 
-    <nb-sidebar left start state="compacted" class="sidebar">
-        <div class="progress-container">
-            <nb-progress-bar size="tiny" class="progress-bar"  [value]="value" [status]="status" [displayValue]="true"></nb-progress-bar>
-            <div class="mock">mock</div>
-        </div>
-    </nb-sidebar>
+    <nb-layout-column (scroll)="onScroll($event)" style="@import '../../themes.scss'; @import '~@nebular/theme/styles/global/_breakpoints.scss'; width: 100%; max-width:100%; padding-top: 0px; overflow-x: hidden; scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh;">
 
-    <nb-layout-column style="@import '../../themes.scss'; @import '~@nebular/theme/styles/global/_breakpoints.scss'; width: 100%; max-width:100%; padding-top: 0px; overflow-x: hidden; scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh;">
+            <!--Sticky Header-->
+            <header>
+                <div class="nav-wrapper">
+                    <div class="nav-progress">
+                        <nb-progress-bar style="width: 100%;" tiny [value]="value" [status]="status" [displayValue]="false"></nb-progress-bar>
+                    </div>
+                    <div class="nav-item">
+                        <a  href="#title">&lt;<span style="color: #FF86FA">home</span>&gt;</a>
+                    </div>
+                    <div class="nav-item">
+                        <a  href="#aboutme">&lt;<span style="color: #FF86FA">about me</span>&gt;</a>
+                    </div>
+                    <div class="nav-item">
+                        <a  href="#experience">&lt;<span style="color: #FF86FA">experience</span>&gt;</a>
+                    </div>
+                    <div class="nav-item">
+                        <a  href="#contactme">&lt;<span style="color: #FF86FA">contact me</span>&gt;</a>
+                    </div>
+                    <div class="nav-item">
+                        <a  href="#minigames">&lt;<span style="color: #FF86FA">mini-games</span>&gt;</a>
+                    </div>
+                </div>
+            </header>
 
-        <!--Sticky Header-->
-        <header>
-            <div class="nav-wrapper">
-                <div class="nav-item">
-                    <a  href="#title">&lt;<span style="color: #FF86FA">home</span>&gt;</a>
-                </div>
-                <div class="nav-item">
-                    <a  href="#aboutme">&lt;<span style="color: #FF86FA">about me</span>&gt;</a>
-                </div>
-                <div class="nav-item">
-                    <a  href="#experience">&lt;<span style="color: #FF86FA">experience</span>&gt;</a>
-                </div>
-                <div class="nav-item">
-                    <a  href="#contactme">&lt;<span style="color: #FF86FA">contact me</span>&gt;</a>
-                </div>
-                <div class="nav-item">
-                    <a  href="#minigames">&lt;<span style="color: #FF86FA">mini-games</span>&gt;</a>
-                </div>
-            </div>
-        </header>
-
-        <!--Section 1-->
-        
-        <section class="section-1" id="title">
+            <!--Section 1-->
             
-            <div class="section-1-title-wrapper">
-                <div class="section-1-title">
-                    &lt;<span style="color: #0094FF;">div</span>&gt; <br/>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">h1</span>&gt; Hello, my name is Kenji &lt;/<span style="color: #FFA800;">h1</span>&gt; <br/>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">p</span>&gt; I’m a Computer Science Student &lt;/<span style="color: #FFA800;">p</span>&gt; <br/> &lt;/<span style="color: #0094FF;">div</span>&gt;
-                </div>
-            </div>
-            <div class="scroll-down-wrapper">
-                <div class="scroll-down"><a href="#aboutme">scroll down ⇩</a></div>
-            </div>
-        </section>
-
-        <!--Section 2-->
-        <section class="section-2" id="aboutme">
-            <div class="section-2-top-container">
-                <div class="section-2-title-wrapper">
-                    <div class="section-2-title">
-                        &lt;<span style="color: #0094FF;">ul</span>&gt; <br>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">li</span>&gt; I'm a Computer Science with AI student in the University of Nottingham Malaysia. &lt;<span style="color: #FFA800;">/li</span>&gt; <br>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">li</span>&gt; I develop websites using the Angular Framework. &lt;<span style="color: #FFA800;">/li</span>&gt; <br> &lt;<span style="color: #0094FF;">/ul</span>&gt; <br><br> &lt;<span style="color: #FFA800;">p</span>&gt; Angular includes tech like: &lt;<span style="color: #FFA800;">/p</span>&gt;
+            <section class="section-1" id="title">
+                
+                <div class="section-1-title-wrapper">
+                    <div class="section-1-title">
+                        &lt;<span style="color: #0094FF;">div</span>&gt; <br/>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">h1</span>&gt; Hello, my name is Kenji &lt;/<span style="color: #FFA800;">h1</span>&gt; <br/>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">p</span>&gt; I’m a Computer Science Student &lt;/<span style="color: #FFA800;">p</span>&gt; <br/> &lt;/<span style="color: #0094FF;">div</span>&gt;
                     </div>
                 </div>
-            </div>
-            <div class="section-2-bottom-container">
-                <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
-                    <nb-card-header class="section-2-card-header">Typescript</nb-card-header>
-                    <nb-card-body>
-                        <div class="text-center-wrapper">
-                            <div class="typescript-desc">
-                                It is a strict syntactical superset of JavaScript
-                            </div>
-                        </div>
-                    </nb-card-body>
-                </nb-card>
-                <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
-                    <nb-card-header class="section-2-card-header">HTML</nb-card-header>
-                    <nb-card-body>
-                        <div class="text-center-wrapper">
-                            <div class="html-desc">
-                                It is a markup tool to build a template for the web-app
-                            </div>
-                        </div>
-                    </nb-card-body>
-                </nb-card>
-                <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
-                    <nb-card-header class="section-2-card-header">SCSS</nb-card-header>
-                    <nb-card-body>
-                        <div class="text-center-wrapper">
-                            <div class="scss-desc">
-                                Short for Sass Styling, which provides styles to the template
-                            </div>
-                        </div>
-                    </nb-card-body>
-                </nb-card>
-                <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
-                    <nb-card-header class="section-2-card-header">Nebular</nb-card-header>
-                    <nb-card-body>
-                        <div class="text-center-wrapper">
-                            <div class="nebular-desc">
-                                A customizable Angular UI library with a huge selection of components
-                            </div>
-                        </div>
-                    </nb-card-body>
-                </nb-card>
-            </div>
-            <div class="scroll-down-wrapper">
-                <div class="scroll-down"><a href="#experience">scroll down ⇩</a></div>
-            </div>
-        </section>
+                <div class="scroll-down-wrapper">
+                    <div class="scroll-down"><a href="#aboutme">scroll down ⇩</a></div>
+                </div>
+            </section>
 
-        <!--Section 3-->
-        <section class="section-3" id="experience">
-            <div class="experience-card-wrapper">
-                <nb-reveal-card class="experience-card">
-                    <nb-card-front style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-header class="section-3-card-header">Software Engineer Intern</nb-card-header>
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="intern-desc-front">
-                                        Green Packet Sdn Bhd (KipleX)<br>Jun 2021 - Aug 2021 (3mo)
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-front>
-                    <nb-card-back style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="intern-desc-back">
-                                        <ul>
-                                            <li>Worked with Angular</li>
-                                            <li>Collaborated with Designers on Figma</li>
-                                            <li>
-                                                Helped the company with building:
-                                                <ol>
-                                                    <li>Landing Page for Mangro project</li>
-                                                    <li>Referral Page for Mangro project</li>
-                                                    <li>Built the results-recommendation components for Fin-Health</li>
-                                                </ol>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>un-view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-back>
-                </nb-reveal-card>
-                <nb-reveal-card class="experience-card">
-                    <nb-card-front style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-header class="section-3-card-header">Website Designing</nb-card-header>
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="design-desc-front">
-                                        Foward Ventures (Closed)<br>Apr 2020 - Sept 2020 (6mo) 
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-front>
-                    <nb-card-back style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="design-desc-back">
-                                        A couple of my friends started a freelance service using WIX.<br>I came up with these website designs:
-                                        <ul>
-                                            <li><a style="color:#FF86FA" href="https://kenjilooxy.wixsite.com/henselandco">Hensel & Co.</a></li>
-                                            <li><a style="color:#FF86FA" href="https://kenjilooxy.wixsite.com/coolco">Cool Co.</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>un-view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-back>
-                </nb-reveal-card>
-                <nb-reveal-card class="experience-card">
-                    <nb-card-front style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;"> 
-                            <nb-card-header class="section-3-card-header">Dice-Roller Android App</nb-card-header>
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="app-desc-front">
-                                        For fun... Just thought it’d be cool to tell :D
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-front>
-                    <nb-card-back style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="app-desc-back">
-                                        Used Kotlin and Android Studio to build an APK...cuz I’m using an android... hahaha
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>un-view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-back>
-                </nb-reveal-card>
-                <nb-reveal-card class="experience-card">
-                    <nb-card-front style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-header class="section-3-card-header">This very website!</nb-card-header>
-                            <nb-card-body class="text-center-wrapper">
-                                <div class="text-center-wrapper">
-                                    <div class="website-desc-front">
-                                        Building this website was a fun-ride, this is how I built it
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-front>
-                    <nb-card-back style="height: 100%; border-radius: 19px;">
-                        <nb-card style="height: 100%; border-radius: 19px;">
-                            <nb-card-body class="text-center-wrapper"> 
-                                <div class="text-center-wrapper">
-                                    <div class="website-desc-back">
-                                        Prototyped on Figma, built using Angular, with the Nebular Library (like the one you’re seeing now).
-                                    </div>
-                                </div>
-                            </nb-card-body>
-                            <nb-card-footer>un-view experience</nb-card-footer>
-                        </nb-card>
-                    </nb-card-back>
-                </nb-reveal-card>
-            </div>
-            <div class="scroll-down-wrapper">
-                <div class="scroll-down"><a href="#contactme">scroll down ⇩</a></div>
-            </div>
-        </section>
-
-        <!--Section 4-->
-        <section class="section-4" id="contactme">
-            <div class="section-4-wrapper">
-                <div class="section-4-right">
-                    <div class="form-wrapper">
-                        <div class="form-header">
-                            <div class="form-header-text">
-                                &lt;<span style="color:#0094FF;">form</span>&gt;
-                            </div>
-                            <div class="form-content">
-                                <form class="form">
-                                    <input nbInput fullWidth class="email-input" placeholder="your email">
-                                    <input nbInput fullWidth class="message-input" placeholder="your message ...">
-                                    <button nbButton class="submit-button" style="">SUBMIT</button>
-                                </form>
-                            </div>
-                            <div class="form-bottom-text">
-                                &lt;<span style="color:#0094FF;">/form</span>&gt;
-                            </div>
+            <!--Section 2-->
+            <section class="section-2" id="aboutme">
+                <div class="section-2-top-container">
+                    <div class="section-2-title-wrapper">
+                        <div class="section-2-title">
+                            &lt;<span style="color: #0094FF;">ul</span>&gt; <br>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">li</span>&gt; I'm a Computer Science with AI student in the University of Nottingham Malaysia. &lt;<span style="color: #FFA800;">/li</span>&gt; <br>&nbsp;&nbsp; &lt;<span style="color: #FFA800;">li</span>&gt; I develop websites using the Angular Framework. &lt;<span style="color: #FFA800;">/li</span>&gt; <br> &lt;<span style="color: #0094FF;">/ul</span>&gt; <br><br> &lt;<span style="color: #FFA800;">p</span>&gt; Angular includes tech like: &lt;<span style="color: #FFA800;">/p</span>&gt;
                         </div>
                     </div>
                 </div>
-                <div class="section-4-left">
-                    <div class="socials-wrapper">
-                        <div class="socials-header">
-                            <div class="socials-header-text">
-                                &lt;<span style="color:#0094FF;">socials</span>&gt;
-                            </div>
-                            <div class="socials-content">
-                                <div class="socials-link-wrapper">
-                                    <a href="" class="linkedin-link"><img class="linkedin-icon" src="assets/linkedin.svg">&nbsp;&nbsp;Connect on <span style="color: #0094FF;">&nbsp;LinkedIn&nbsp;&nbsp;</span></a>
-                                    <a href="" class="instagram-link"><img class="instagram-icon" src="assets/instagram.svg">&nbsp;&nbsp;Follow on <span style="color: #FF86FA;">&nbsp;Instagram&nbsp;&nbsp;</span></a>
-                                    <a href="" class="skillshare-link"><img class="skillshare-icon" src="assets/skillshare.svg">&nbsp;&nbsp;Oh, I teach on <span style="color: #B1FF73;">&nbsp;Skillshare&nbsp;</span> too!&nbsp;&nbsp;</a>
+                <div class="section-2-bottom-container">
+                    <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
+                        <nb-card-header class="section-2-card-header">Typescript</nb-card-header>
+                        <nb-card-body>
+                            <div class="text-center-wrapper">
+                                <div class="typescript-desc">
+                                    It is a strict syntactical superset of JavaScript
                                 </div>
                             </div>
-                            <div class="socials-bottom-text">
-                                &lt;<span style="color:#0094FF">/socials</span>&gt;
+                        </nb-card-body>
+                    </nb-card>
+                    <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
+                        <nb-card-header class="section-2-card-header">HTML</nb-card-header>
+                        <nb-card-body>
+                            <div class="text-center-wrapper">
+                                <div class="html-desc">
+                                    It is a markup tool to build a template for the web-app
+                                </div>
+                            </div>
+                        </nb-card-body>
+                    </nb-card>
+                    <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
+                        <nb-card-header class="section-2-card-header">SCSS</nb-card-header>
+                        <nb-card-body>
+                            <div class="text-center-wrapper">
+                                <div class="scss-desc">
+                                    Short for Sass Styling, which provides styles to the template
+                                </div>
+                            </div>
+                        </nb-card-body>
+                    </nb-card>
+                    <nb-card style="height: 80%; width: 20%; margin-bottom: 0px; border-radius: 19px;">
+                        <nb-card-header class="section-2-card-header">Nebular</nb-card-header>
+                        <nb-card-body>
+                            <div class="text-center-wrapper">
+                                <div class="nebular-desc">
+                                    A customizable Angular UI library with a huge selection of components
+                                </div>
+                            </div>
+                        </nb-card-body>
+                    </nb-card>
+                </div>
+                <div class="scroll-down-wrapper">
+                    <div class="scroll-down"><a href="#experience">scroll down ⇩</a></div>
+                </div>
+            </section>
+
+            <!--Section 3-->
+            <section class="section-3" id="experience">
+                <div class="experience-card-wrapper">
+                    <nb-reveal-card class="experience-card">
+                        <nb-card-front style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-header class="section-3-card-header">Software Engineer Intern</nb-card-header>
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="intern-desc-front">
+                                            Green Packet Sdn Bhd (KipleX)<br>Jun 2021 - Aug 2021 (3mo)
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-front>
+                        <nb-card-back style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="intern-desc-back">
+                                            <ul>
+                                                <li>Worked with Angular</li>
+                                                <li>Collaborated with Designers on Figma</li>
+                                                <li>
+                                                    Helped the company with building:
+                                                    <ol>
+                                                        <li>Landing Page for Mangro project</li>
+                                                        <li>Referral Page for Mangro project</li>
+                                                        <li>Built the results-recommendation components for Fin-Health</li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>un-view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-back>
+                    </nb-reveal-card>
+                    <nb-reveal-card class="experience-card">
+                        <nb-card-front style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-header class="section-3-card-header">Website Designing</nb-card-header>
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="design-desc-front">
+                                            Foward Ventures (Closed)<br>Apr 2020 - Sept 2020 (6mo) 
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-front>
+                        <nb-card-back style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="design-desc-back">
+                                            A couple of my friends started a freelance service using WIX.<br>I came up with these website designs:
+                                            <ul>
+                                                <li><a style="color:#FF86FA" href="https://kenjilooxy.wixsite.com/henselandco">Hensel & Co.</a></li>
+                                                <li><a style="color:#FF86FA" href="https://kenjilooxy.wixsite.com/coolco">Cool Co.</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>un-view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-back>
+                    </nb-reveal-card>
+                    <nb-reveal-card class="experience-card">
+                        <nb-card-front style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;"> 
+                                <nb-card-header class="section-3-card-header">Dice-Roller Android App</nb-card-header>
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="app-desc-front">
+                                            For fun... Just thought it’d be cool to tell :D
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-front>
+                        <nb-card-back style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="app-desc-back">
+                                            Used Kotlin and Android Studio to build an APK...cuz I’m using an android... hahaha
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>un-view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-back>
+                    </nb-reveal-card>
+                    <nb-reveal-card class="experience-card">
+                        <nb-card-front style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-header class="section-3-card-header">This very website!</nb-card-header>
+                                <nb-card-body class="text-center-wrapper">
+                                    <div class="text-center-wrapper">
+                                        <div class="website-desc-front">
+                                            Building this website was a fun-ride, this is how I built it
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-front>
+                        <nb-card-back style="height: 100%; border-radius: 19px;">
+                            <nb-card style="height: 100%; border-radius: 19px;">
+                                <nb-card-body class="text-center-wrapper"> 
+                                    <div class="text-center-wrapper">
+                                        <div class="website-desc-back">
+                                            Prototyped on Figma, built using Angular, with the Nebular Library (like the one you’re seeing now).
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                                <nb-card-footer>un-view experience</nb-card-footer>
+                            </nb-card>
+                        </nb-card-back>
+                    </nb-reveal-card>
+                </div>
+                <div class="scroll-down-wrapper">
+                    <div class="scroll-down"><a href="#contactme">scroll down ⇩</a></div>
+                </div>
+            </section>
+
+            <!--Section 4-->
+            <section class="section-4" id="contactme">
+                <div class="section-4-wrapper">
+                    <div class="section-4-right">
+                        <div class="form-wrapper">
+                            <div class="form-header">
+                                <div class="form-header-text">
+                                    &lt;<span style="color:#0094FF;">form</span>&gt;
+                                </div>
+                                <div class="form-content">
+                                    <form class="form">
+                                        <input nbInput fullWidth class="email-input" placeholder="your email">
+                                        <input nbInput fullWidth class="message-input" placeholder="your message ...">
+                                        <button nbButton class="submit-button" style="">SUBMIT</button>
+                                    </form>
+                                </div>
+                                <div class="form-bottom-text">
+                                    &lt;<span style="color:#0094FF;">/form</span>&gt;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-4-left">
+                        <div class="socials-wrapper">
+                            <div class="socials-header">
+                                <div class="socials-header-text">
+                                    &lt;<span style="color:#0094FF;">socials</span>&gt;
+                                </div>
+                                <div class="socials-content">
+                                    <div class="socials-link-wrapper">
+                                        <a href="" class="linkedin-link"><img class="linkedin-icon" src="assets/linkedin.svg">&nbsp;&nbsp;Connect on <span style="color: #0094FF;">&nbsp;LinkedIn&nbsp;&nbsp;</span></a>
+                                        <a href="" class="instagram-link"><img class="instagram-icon" src="assets/instagram.svg">&nbsp;&nbsp;Follow on <span style="color: #FF86FA;">&nbsp;Instagram&nbsp;&nbsp;</span></a>
+                                        <a href="" class="skillshare-link"><img class="skillshare-icon" src="assets/skillshare.svg">&nbsp;&nbsp;Oh, I teach on <span style="color: #B1FF73;">&nbsp;Skillshare&nbsp;</span> too!&nbsp;&nbsp;</a>
+                                    </div>
+                                </div>
+                                <div class="socials-bottom-text">
+                                    &lt;<span style="color:#0094FF">/socials</span>&gt;
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="scroll-down-wrapper">
-                <div class="scroll-down"><a href="#minigames">scroll down ⇩</a></div>
-            </div>
-        </section>
-
-        <!--Section 5-->
-        <section class="section-5" id="minigames">
-            <div class="minigames-card-container">
-                <div class="minigames-card-wrapper">
-                    <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
-                        <nb-card-header class="text-center-wrapper">BALL DROP</nb-card-header>
-                        <nb-card-body class="minigames-card-body-wrapper">
-                            <div class="minigames-icon-wrapper">
-                                <img src="assets/fallingball.svg">
-                            </div>
-                        </nb-card-body>
-                    </nb-card>
-                    <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
-                        <nb-card-header class="text-center-wrapper">TREX RUN</nb-card-header>
-                        <nb-card-body class="minigames-card-body-wrapper">
-                            <div class="minigames-icon-wrapper">
-                                <img src="assets/trexrun.svg">
-                            </div>
-                        </nb-card-body>
-                    </nb-card>
-                    <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
-                        <nb-card-header class="text-center-wrapper">FLAPPY BIRD</nb-card-header>
-                        <nb-card-body class="minigames-card-body-wrapper">
-                            <div class="minigames-icon-wrapper">
-                                <img src="assets/flappybird.svg">
-                            </div>
-                        </nb-card-body>
-                    </nb-card>
-                    <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
-                        <nb-card-header class="text-center-wrapper">TIC TAC TOE</nb-card-header>
-                        <nb-card-body class="minigames-card-body-wrapper">
-                            <div class="minigames-icon-wrapper">
-                                <img src="assets/tictactoe.svg">
-                            </div>
-                        </nb-card-body>
-                    </nb-card>
+                <div class="scroll-down-wrapper">
+                    <div class="scroll-down"><a href="#minigames">scroll down ⇩</a></div>
                 </div>
-            </div>
-            <div class="scroll-down-wrapper">
-                <div class="scroll-down"><a href="#title">back to top ⮵</a></div>
-            </div>
-        </section>
+            </section>
+
+            <!--Section 5-->
+            <section class="section-5" id="minigames">
+                <div class="minigames-card-container">
+                    <div class="minigames-card-wrapper">
+                        <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
+                            <nb-card-header class="text-center-wrapper">BALL DROP</nb-card-header>
+                            <nb-card-body class="minigames-card-body-wrapper">
+                                <div class="minigames-icon-wrapper">
+                                    <img src="assets/fallingball.svg">
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                        <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
+                            <nb-card-header class="text-center-wrapper">TREX RUN</nb-card-header>
+                            <nb-card-body class="minigames-card-body-wrapper">
+                                <div class="minigames-icon-wrapper">
+                                    <img src="assets/trexrun.svg">
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                        <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
+                            <nb-card-header class="text-center-wrapper">FLAPPY BIRD</nb-card-header>
+                            <nb-card-body class="minigames-card-body-wrapper">
+                                <div class="minigames-icon-wrapper">
+                                    <img src="assets/flappybird.svg">
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                        <nb-card style="width: 20%; height: 40vh; border-radius: 19px;">
+                            <nb-card-header class="text-center-wrapper">TIC TAC TOE</nb-card-header>
+                            <nb-card-body class="minigames-card-body-wrapper">
+                                <div class="minigames-icon-wrapper">
+                                    <img src="assets/tictactoe.svg">
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+                <div class="scroll-down-wrapper">
+                    <div class="scroll-down"><a href="#title">back to top ⮵</a></div>
+                </div>
+            </section>
     </nb-layout-column>
 
 </nb-layout> 

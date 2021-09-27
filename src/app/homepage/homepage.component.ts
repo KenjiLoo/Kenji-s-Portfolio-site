@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
@@ -16,7 +16,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  value = 100;
+  value = 1;
 
   setValue(newValue:number) {
     this.value = Math.min(Math.max(newValue, 0), 100)
@@ -32,5 +32,10 @@ export class HomepageComponent implements OnInit {
     } else {
       return 'success';
     }
+  }
+
+  
+  onScroll(event:any){
+      this.value += 1;    
   }
 }
