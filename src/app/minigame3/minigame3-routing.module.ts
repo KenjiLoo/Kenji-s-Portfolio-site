@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FlappybirdComponent } from './flappybird/flappybird.component';
 
 const routes: Routes = [
-  { path:'', component:FlappybirdComponent }
+  { path:'', component: FlappybirdComponent },
 ];
 
 @NgModule({

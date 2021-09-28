@@ -3,6 +3,84 @@
 @import '~@nebular/theme/styles/themes/default';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
+
+/* Mobile View */ 
+@media only screen and (min-width: 35px){ 
+
+    /* General */
+    *{
+        font-family: 'Source Code Pro', monospace;
+        font-weight: bold;
+        scroll-behavior: smooth;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        text-decoration: underline;
+        text-decoration-color: #FE0000;
+        transition: 0.5s;
+    }
+    ul li{
+        font-family: 'Source Code Pro', monospace;
+    }
+    .scroll-down-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .scroll-down{
+        font-size: 1.3em;
+        margin-bottom: 0.5em;
+    }
+    .text-center-wrapper{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    nb-card:hover{
+        border: 2px solid #B1FF73;
+    }
+
+    /* Section Settings for smooth scroll effect*/
+    section{
+        height: 100vh;
+        display: flex;
+        scroll-snap-align: start;
+    }
+
+     /* Header */
+    header{
+        width: 100%;
+        padding: 5px;
+        display: flex; 
+        position: fixed;
+    }
+    .nav-wrapper{
+        width: 93%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .nav-item{
+        display: none;
+    }
+    .nav-progress{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+    }
+
+
+}
+
+
 /* Desktop View*/
 @media only screen and (min-width: 992px){
     
